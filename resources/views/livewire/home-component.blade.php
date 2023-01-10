@@ -4,16 +4,13 @@
 		        <div class="row justify-content-between">
 		            <div class="col-lg-5">
 		                <div class="intro-excerpt">
-		                    <h1>Modern Interior <span clsas="d-block">Design Studio</span></h1>
-		                    <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-		                        vulputate velit imperdiet dolor tempor tristique.</p>
-		                    <p><a href="" class="btn btn-secondary me-2">Shop Now</a><a href="#"
-		                            class="btn btn-white-outline">Explore</a></p>
+		                    <h1>Goose Goose <span clsas="d-block">Duck</span></h1>
+		                    <p class="mb-4">Goose, goose, DUCK? A game of social deduction where you and your fellow geese must work together to complete your mission. </p>
 		                </div>
 		            </div>
 		            <div class="col-lg-7">
 		                <div class="hero-img-wrap">
-		                    <img src="{{ asset('images/couch.png')}}" class="img-fluid">
+		                    <img src="{{ asset('images/highlight.jpg')}}" class="img-fluid img-highlight">
 		                </div>
 		            </div>
 		        </div>
@@ -28,19 +25,18 @@
 
 		            <!-- Start Column 1 -->
 		            <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-		                <h2 class="mb-4 section-title">Crafted with excellent material.</h2>
-		                <p class="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-		                    vulputate velit imperdiet dolor tempor tristique. </p>
-		                <p><a href="shop.html" class="btn">Explore</a></p>
+		                <h2 class="mb-4 section-title">Featured</h2>
+		                <p class="mb-4">Explore one of our top games based on all sources of revenues.</p>
+                        <p><a href="" class="btn btn-secondary me-2">Shop Now</a></p>
 		            </div>
 		            <!-- End Column 1 -->
 
 		            <!-- Start Column 2 -->
 		            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 		                <a class="product-item" href="cart.html">
-		                    <img src="{{ asset('images/product-1.png')}}" class="img-fluid product-thumbnail">
-		                    <h3 class="product-title">Nordic Chair</h3>
-		                    <strong class="product-price">$50.00</strong>
+		                    <img src="{{ asset('images/product1.png')}}" class="img-fluid product-thumbnail">
+		                    <h3 class="product-title">The Witcher 3 : Wild Hunt</h3>
+		                    <strong class="product-price">$25.55</strong>
 
 		                    <span class="icon-cross">
 		                        <img src="{{ asset('images/cross.svg')}}" class="img-fluid">
@@ -52,8 +48,8 @@
 		            <!-- Start Column 3 -->
 		            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 		                <a class="product-item" href="cart.html">
-		                    <img src="{{ asset('images/product-2.png')}}" class="img-fluid product-thumbnail">
-		                    <h3 class="product-title">Kruzo Aero Chair</h3>
+		                    <img src="{{ asset('images/product2.png')}}" class="img-fluid product-thumbnail">
+		                    <h3 class="product-title">Red Dead Redemption II</h3>
 		                    <strong class="product-price">$78.00</strong>
 
 		                    <span class="icon-cross">
@@ -66,8 +62,8 @@
 		            <!-- Start Column 4 -->
 		            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 		                <a class="product-item" href="cart.html">
-		                    <img src="{{ asset('images/product-3.png')}}" class="img-fluid product-thumbnail">
-		                    <h3 class="product-title">Ergonomic Chair</h3>
+		                    <img src="{{ asset('images/product3.png')}}" class="img-fluid product-thumbnail">
+		                    <h3 class="product-title">Forza Horizon 5</h3>
 		                    <strong class="product-price">$43.00</strong>
 
 		                    <span class="icon-cross">
@@ -87,9 +83,8 @@
 		    <div class="container">
 		        <div class="row justify-content-between">
 		            <div class="col-lg-6">
-		                <h2 class="section-title">Why Choose Us</h2>
-		                <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit
-		                    imperdiet dolor tempor tristique.</p>
+		                <h2 class="section-title">Why You Should Buy From Us</h2>
+		                <p>Easily we are one of the best Digital Game Online Shop because of our dedicated work to fulfill our customer needs</p>
 
 		                <div class="row my-5">
 		                    <div class="col-6 col-md-6">
@@ -98,8 +93,7 @@
 		                                <img src="{{ asset('images/truck.svg')}}" alt="Image" class="imf-fluid">
 		                            </div>
 		                            <h3>Fast &amp; Free Shipping</h3>
-		                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-		                                vulputate.</p>
+		                            <p>We always try our best to send your order on time and of course with free shipping</p>
 		                        </div>
 		                    </div>
 
@@ -109,8 +103,7 @@
 		                                <img src="{{ asset('images/bag.svg')}}" alt="Image" class="imf-fluid">
 		                            </div>
 		                            <h3>Easy to Shop</h3>
-		                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-		                                vulputate.</p>
+		                            <p>We provide the simplest website ever for you to shop</p></p>
 		                        </div>
 		                    </div>
 
@@ -120,8 +113,7 @@
 		                                <img src="{{ asset('images/support.svg')}}" alt="Image" class="imf-fluid">
 		                            </div>
 		                            <h3>24/7 Support</h3>
-		                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-		                                vulputate.</p>
+		                            <p>We also provide 24/7 Customer Service support for our customer</p>
 		                        </div>
 		                    </div>
 
@@ -131,8 +123,7 @@
 		                                <img src="{{ asset('images/return.svg')}}" alt="Image" class="imf-fluid">
 		                            </div>
 		                            <h3>Hassle Free Returns</h3>
-		                            <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-		                                vulputate.</p>
+		                            <p>We always help for customer in need to do some refund with reasonable problems</p>
 		                        </div>
 		                    </div>
 
@@ -141,7 +132,7 @@
 
 		            <div class="col-lg-5">
 		                <div class="img-wrap">
-		                    <img src="{{ asset('images/why-choose-us-img.jpg')}}" alt="Image" class="img-fluid">
+		                    <img src="{{ asset('images/website.png')}}" alt="Image" class="img-fluid">
 		                </div>
 		            </div>
 
@@ -150,91 +141,12 @@
 		</div>
 		<!-- End Why Choose Us Section -->
 
-		<!-- Start We Help Section -->
-		<div class="we-help-section">
-		    <div class="container">
-		        <div class="row justify-content-between">
-		            <div class="col-lg-7 mb-5 mb-lg-0">
-		                <div class="imgs-grid">
-		                    <div class="grid grid-1"><img src="{{ asset('images/img-grid-1.jpg')}}" alt="Untree.co"></div>
-		                    <div class="grid grid-2"><img src="{{ asset('images/img-grid-2.jpg')}}" alt="Untree.co"></div>
-		                    <div class="grid grid-3"><img src="{{ asset('images/img-grid-3.jpg')}}" alt="Untree.co"></div>
-		                </div>
-		            </div>
-		            <div class="col-lg-5 ps-lg-5">
-		                <h2 class="section-title mb-4">We Help You Make Modern Interior Design</h2>
-		                <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam
-		                    ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant
-		                    morbi tristique senectus et netus et malesuada</p>
-
-		                <ul class="list-unstyled custom-list my-4">
-		                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-		                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-		                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-		                    <li>Donec vitae odio quis nisl dapibus malesuada</li>
-		                </ul>
-		                <p><a herf="#" class="btn">Explore</a></p>
-		            </div>
-		        </div>
-		    </div>
-		</div>
-		<!-- End We Help Section -->
-
-		<!-- Start Popular Product -->
-		<div class="popular-product">
-		    <div class="container">
-		        <div class="row">
-
-		            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-		                <div class="product-item-sm d-flex">
-		                    <div class="thumbnail">
-		                        <img src="{{ asset('images/product-1.png')}}" alt="Image" class="img-fluid">
-		                    </div>
-		                    <div class="pt-3">
-		                        <h3>Nordic Chair</h3>
-		                        <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-		                        <p><a href="#">Read More</a></p>
-		                    </div>
-		                </div>
-		            </div>
-
-		            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-		                <div class="product-item-sm d-flex">
-		                    <div class="thumbnail">
-		                        <img src="{{ asset('images/product-2.png')}}" alt="Image" class="img-fluid">
-		                    </div>
-		                    <div class="pt-3">
-		                        <h3>Kruzo Aero Chair</h3>
-		                        <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-		                        <p><a href="#">Read More</a></p>
-		                    </div>
-		                </div>
-		            </div>
-
-		            <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
-		                <div class="product-item-sm d-flex">
-		                    <div class="thumbnail">
-		                        <img src="{{ asset('images/product-3.png')}}" alt="Image" class="img-fluid">
-		                    </div>
-		                    <div class="pt-3">
-		                        <h3>Ergonomic Chair</h3>
-		                        <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-		                        <p><a href="#">Read More</a></p>
-		                    </div>
-		                </div>
-		            </div>
-
-		        </div>
-		    </div>
-		</div>
-		<!-- End Popular Product -->
-
 		<!-- Start Testimonial Slider -->
 		<div class="testimonial-section">
 		    <div class="container">
 		        <div class="row">
 		            <div class="col-lg-7 mx-auto text-center">
-		                <h2 class="section-title">Testimonials</h2>
+		                <h2 class="section-title">Reviews from our customer</h2>
 		            </div>
 		        </div>
 
@@ -358,9 +270,9 @@
 
 		            <div class="col-12 col-sm-6 col-md-4 mb-4 mb-md-0">
 		                <div class="post-entry">
-		                    <a href="#" class="post-thumbnail"><img src="{{ asset('images/post-1.jpg')}}" alt="Image" class="img-fluid"></a>
+		                    <a href="#" class="post-thumbnail"><img src="{{ asset('images/post-1.png')}}" alt="Image" class="img-fluid"></a>
 		                    <div class="post-content-entry">
-		                        <h3><a href="#">First Time Home Owner Ideas</a></h3>
+		                        <h3><a href="#">Vanguard Zombies Conclude in The Archon</a></h3>
 		                        <div class="meta">
 		                            <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 19,
 		                                    2021</a></span>
@@ -373,7 +285,7 @@
 		                <div class="post-entry">
 		                    <a href="#" class="post-thumbnail"><img src="{{ asset('images/post-2.jpg')}}" alt="Image" class="img-fluid"></a>
 		                    <div class="post-content-entry">
-		                        <h3><a href="#">How To Keep Your Furniture Clean</a></h3>
+		                        <h3><a href="#">New Battle Pass Call of Duty Modern Warfare II</a></h3>
 		                        <div class="meta">
 		                            <span>by <a href="#">Robert Fox</a></span> <span>on <a href="#">Dec 15, 2021</a></span>
 		                        </div>
@@ -385,7 +297,7 @@
 		                <div class="post-entry">
 		                    <a href="#" class="post-thumbnail"><img src="{{ asset('images/post-3.jpg')}}" alt="Image" class="img-fluid"></a>
 		                    <div class="post-content-entry">
-		                        <h3><a href="#">Small Space Furniture Apartment Ideas</a></h3>
+		                        <h3><a href="#">Crash Team Rumble - Coming Soon</a></h3>
 		                        <div class="meta">
 		                            <span>by <a href="#">Kristin Watson</a></span> <span>on <a href="#">Dec 12,
 		                                    2021</a></span>

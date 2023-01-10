@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="favicon.png">
+    <meta name="author" content="Morass">
+    <link rel="shortcut icon" href="{{ asset('favicon.png')}}">
 
     <meta name="description" content="" />
     <meta name="keywords" content="bootstrap, bootstrap4" />
@@ -15,7 +15,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="{{ asset('css/tiny-slider.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <title>Furni Free Bootstrap 5 Template for Furniture and Interior Design Websites by Untree.co </title>
+    <title> Morass | Digital Game Online Shop </title>
     @livewireStyles
 </head>
 
@@ -25,7 +25,7 @@
     <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
 
         <div class="container">
-            <a class="navbar-brand" href="index.html">Furni<span>.</span></a>
+            <a class="navbar-brand" href="index.html">Morass<span>.</span></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
                 aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
@@ -65,7 +65,7 @@
         <div class="container relative">
 
             <div class="sofa-img">
-                <img src="{{ asset('images/sofa.png') }}" alt="Image" class="img-fluid">
+                <img src="{{ asset('images/footer.png') }}" alt="Image" class="img-fluid">
             </div>
 
             <div class="row">
