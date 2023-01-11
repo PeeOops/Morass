@@ -11,10 +11,10 @@
     <meta name="keywords" content="bootstrap, bootstrap4" />
 
     <!-- Bootstrap CSS -->
-    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="{{ asset('css/tiny-slider.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/tiny-slider.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <title> Morass | Digital Game Online Shop </title>
     @livewireStyles
 </head>
@@ -42,10 +42,42 @@
                     <li><a class="nav-link" href="contact.html">Contact us</a></li>
                 </ul>
 
-                <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-                    <li><a class="nav-link" href="#"><img src="{{ asset('images/user.svg') }}"></a></li>
-                    <li><a class="nav-link" href="/cart"><img src="{{ asset('images/cart.svg') }}"></a></li>
-                </ul>
+                @if(Route::has('login'))
+                    @auth
+                        @if(Auth::user()->usertype === 'adm')
+                        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                            <li><a class="nav-link" href="#">Account</a></li>
+                            <li><a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard</a></li>
+                            <li><a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                            <form id="logout-form" method="POST" action="{{route('logout')}}">
+                                @csrf
+                            </form>
+                        </ul>
+
+                        @else
+                        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                            <li><a class="nav-link" href="#"><img src="{{ asset('images/user.svg') }}"></a></li>
+                            <li><a class="nav-link" href="/cart"><img src="{{ asset('images/cart.svg') }}"></a></li>
+                            <li><a class="nav-link" href="{{route('user.dashboard')}}">Dashboard</a></li>
+                            <li><a class="nav-link" href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></li>
+                            <form id="logout-form" method="POST" action="{{route('logout')}}">
+                                @csrf
+                            </form>
+                        </ul>
+                            
+                        @endif
+                    @else
+
+
+                        <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
+                            <li><a class="nav-link" href="{{route('login')}}" style="color:white;">Login</a></li>
+                            <li><a class="nav-link" href="{{route('register')}}" style="color:white;">Register</a></li>
+                        </ul>
+                    @endif
+
+                    @endif
+
+
             </div>
         </div>
 

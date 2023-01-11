@@ -4,6 +4,8 @@ use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
+use App\Http\Livewire\User\UserDashboardComponent;
+use App\Http\Livewire\Admin\AdminDashboardComponent;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,3 +29,29 @@ Route::get('/shop',ShopComponent::class);
 Route::get('/cart',CartComponent::class);
 Route::get('/checkout',CheckoutComponent::class);
 
+//Default from jetstream
+// Route::middleware([
+//     'auth:sanctum',
+//     config('jetstream.auth_session'),
+//     'verified'
+// ])->group(function () {
+//     Route::get('/dashboard', function () {
+//         return view('dashboard');
+//     })->name('dashboard');
+// });
+
+//For user or customer
+Route::middleware(['auth:sanctum','verified'])->group(function(){
+    Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
+
+});
+
+//For admin
+Route::middleware(['auth:sanctum','authadmin'])->group(function(){
+    Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+
+});
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
