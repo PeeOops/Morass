@@ -7,6 +7,7 @@ use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,7 @@ Route::get('/shop',ShopComponent::class);
 Route::get('/cart',CartComponent::class);
 Route::get('/checkout',CheckoutComponent::class);
 
+
 //Default from jetstream
 // Route::middleware([
 //     'auth:sanctum',
@@ -46,7 +48,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 
 });
 
-//For admin
+//For admin home page configuration
 Route::middleware(['auth:sanctum','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
 
