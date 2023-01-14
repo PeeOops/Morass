@@ -6,6 +6,7 @@ use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\CheckoutComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
+use App\Http\Livewire\Admin\AdminHighlightComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 
@@ -51,6 +52,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 //For admin home page configuration
 Route::middleware(['auth:sanctum','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/highlight',AdminHighlightComponent::class)->name('admin.highlight');
 
 });
 

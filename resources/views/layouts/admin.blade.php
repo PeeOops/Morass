@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="{{asset('admin/assets/css/style.css')}}">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="{{asset('favicon.ico')}}" />
+    @livewireStyles
 </head>
 
 <body>
@@ -49,29 +50,28 @@
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/buttons.html">Highlights</a>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.highlight')}}">Highlights</a>
                             </li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="pages/ui-features/dropdowns.html">Featured</a></li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="pages/ui-features/typography.html">Reviews</a></li>
-                            <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/typography.html">Blogs</a></li>
+                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Blogs</a>
+                            </li>
                         </ul>
                     </div>
                 </li>
-                <li class="nav-item menu-items">
-                    <a class="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false"
+                <!-- <li class="nav-item menu-items">
+                    <a class="nav-link" data-bs-toggle="collapse" href="" aria-expanded="false"
                         aria-controls="ui-basic">
                         <span class="menu-icon">
                             <i class="mdi mdi-shopping"></i>
                         </span>
                         <span class="menu-title">Shop Page</span>
                     </a>
-                </li>
+                </li> -->
                 <li class="nav-item menu-items">
-                    <a class="nav-link" href="pages/forms/basic_elements.html">
+                    <a class="nav-link" href="">
                         <span class="menu-icon">
                             <i class="mdi mdi-credit-card"></i>
                         </span>
@@ -181,7 +181,9 @@
         </nav>
         <!-- partial -->
 
-        {{$slot}}
+        <div class="container-fluid page-body-wrapper">
+            {{$slot}}
+        </div>
 
 
         <!-- main-panel ends -->
@@ -210,6 +212,7 @@
     <!-- Custom js for this page -->
     <script src="{{asset('admin/assets/js/dashboard.js')}}"></script>
     <!-- End custom js for this page -->
+    @livewireScripts
 </body>
 
 </html>
