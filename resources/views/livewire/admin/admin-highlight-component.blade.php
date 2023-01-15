@@ -42,22 +42,25 @@
 
         <!-- Show Current Highlight Data -->
         <div>
-            <h3 class="page-title mb-5 mt-3"> Data </h3>
+            <h3 class="page-title mb-5 mt-3"> Current Data </h3>
             <table class="table table-bordered table-dark" style="color:white;">
                 <thead>
                     <tr>
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
                         <th scope="col">Image</th>
+                        <th scole="col">Delete</th>
                     </tr>
                 </thead>
                 @foreach($highlights as $highlight)
+                
                 <tbody>
                     <tr>
                         <th>{{$highlight->title}}</th>
                         <td>{{$highlight->description}}</td>
                         <td><img src="{{asset('storage/'.$highlight->image)}}" alt=""></td>
-                        <td>{{$highlight->image}}</td>
+                        <td><button onclick="return confirm('Are you sure you want to delete this data?') || event.stopImmediatePropagation()" wire:click="deleteHighlight({{ $highlight->id }})" type="submit" class="btn btn-primary  pd-0"
+                            value="Save">Delete</button></td>
                     </tr>
                 </tbody>
                 @endforeach

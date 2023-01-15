@@ -61,7 +61,7 @@
                         </ul>
                     </div>
                 </li>
-                <!-- <li class="nav-item menu-items">
+                <li class="nav-item menu-items">
                     <a class="nav-link" data-bs-toggle="collapse" href="" aria-expanded="false"
                         aria-controls="ui-basic">
                         <span class="menu-icon">
@@ -69,7 +69,7 @@
                         </span>
                         <span class="menu-title">Shop Page</span>
                     </a>
-                </li> -->
+                </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="">
                         <span class="menu-icon">
