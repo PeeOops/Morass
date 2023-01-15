@@ -2,17 +2,20 @@
 		<div class="hero">
 		    <div class="container">
 		        <div class="row justify-content-between">
+				@foreach($highlights as $highlight)
 		            <div class="col-lg-5">
 		                <div class="intro-excerpt">
-		                    <h1>Goose Goose <span clsas="d-block">Duck</span></h1>
-		                    <p class="mb-4">Goose, goose, DUCK? A game of social deduction where you and your fellow geese must work together to complete your mission. </p>
+						
+		                    <h1>{{$highlight->title}}</h1>
+		                    <p class="mb-4">{{$highlight->description}}</p>
 		                </div>
 		            </div>
 		            <div class="col-lg-7">
 		                <div class="hero-img-wrap">
-		                    <img src="{{ asset('images/highlight.jpg')}}" class="img-fluid img-highlight">
+		                    <img src="{{asset('storage/'.$highlight->image)}}" class="img-fluid img-highlight">
 		                </div>
 		            </div>
+				@endforeach
 		        </div>
 		    </div>
 		</div>

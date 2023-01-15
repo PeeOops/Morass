@@ -56,7 +56,7 @@
                     <tr>
                         <th>{{$highlight->title}}</th>
                         <td>{{$highlight->description}}</td>
-                        <td><img src="{{ storage_path('app/public/' . $highlight->image) }}" alt=""></td>
+                        <td><img src="{{asset('storage/'.$highlight->image)}}" alt=""></td>
                         <td>{{$highlight->image}}</td>
                     </tr>
                 </tbody>

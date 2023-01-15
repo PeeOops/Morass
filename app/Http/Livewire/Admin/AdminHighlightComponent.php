@@ -24,11 +24,15 @@ class AdminHighlightComponent extends Component
 
     public function createHighlight()
     {
+
+        $this->validate([
+            'image' => 'image|max:5120', //5Mb Max
+        ]);
         
         Highlight::create([
             'title' => $this->title,
             'description' => $this->description,
-            'image' => $this->image->store('highlightimage','public')
+            'image' => $this->image->store('images','public')
         ]);
 
         return redirect()->route('admin.highlight');
