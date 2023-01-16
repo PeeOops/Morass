@@ -9,6 +9,7 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminHighlightComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Livewire\Admin\AdminFeaturedComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,6 +54,7 @@ Route::middleware(['auth:sanctum','verified'])->group(function(){
 Route::middleware(['auth:sanctum','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
     Route::get('/admin/highlight',AdminHighlightComponent::class)->name('admin.highlight');
+    Route::get('/admin/featured',AdminFeaturedComponent::class)->name('admin.featured');
 
 });
 

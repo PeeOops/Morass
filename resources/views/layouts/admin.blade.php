@@ -53,7 +53,7 @@
                             <li class="nav-item"> <a class="nav-link" href="{{route('admin.highlight')}}">Highlights</a>
                             </li>
                             <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/dropdowns.html">Featured</a></li>
+                                    href="{{route('admin.featured')}}">Featured</a></li>
                             <li class="nav-item"> <a class="nav-link"
                                     href="pages/ui-features/typography.html">Reviews</a></li>
                             <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Blogs</a>
