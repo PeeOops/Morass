@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('featureds', function (Blueprint $table) {
+        Schema::create('featuredgames', function (Blueprint $table) {
             $table->id();
-            $table->string("title");
-            $table->string("description");
+            $table->string("game_title");
+            $table->string("price");
+            $table->string("image");
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('featureds');
+        Schema::dropIfExists('featuredgames');
     }
 };

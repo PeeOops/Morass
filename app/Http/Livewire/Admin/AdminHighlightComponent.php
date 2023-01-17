@@ -16,6 +16,8 @@ class AdminHighlightComponent extends Component
     public $description;
     public $image;
 
+    
+
 
     public function render()
     {

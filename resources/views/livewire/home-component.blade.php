@@ -19,7 +19,6 @@
 		        </div>
 		    </div>
 		</div>
-		<!-- End Hero Section -->
 
 		
 
@@ -27,56 +26,31 @@
 		<div class="product-section">
 		    <div class="container">
 		        <div class="row">
+					@foreach($featureds as $featured)
 
-		            <!-- Start Column 1 -->
 		            <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-		                <h2 class="mb-4 section-title">Featured</h2>
-		                <p class="mb-4">Explore one of our top games based on all sources of revenues.</p>
+		                <h2 class="mb-4 section-title">{{$featured->title}}</h2>
+		                <p class="mb-4">{{$featured->description}}</p>
                         <p><a href="" class="btn btn-secondary me-2">Shop Now</a></p>
 		            </div>
-		            <!-- End Column 1 -->
+					@endforeach
 
-		            <!-- Start Column 2 -->
+
+
+					@foreach($featuredgames as $featuredgame)
 		            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
 		                <a class="product-item" href="cart.html">
-		                    <img src="{{ asset('images/product1.png')}}" class="img-fluid product-thumbnail">
-		                    <h3 class="product-title">The Witcher 3 : Wild Hunt</h3>
-		                    <strong class="product-price">$25.55</strong>
+		                    <img src="{{asset('storage/'.$featuredgame->image)}}" class="img-fluid product-thumbnail">
+		                    <h3 class="product-title">{{$featuredgame->title}}</h3>
+		                    <strong class="product-price"><span>$</span>{{$featuredgame->price}}</strong>
 
-		                    <span class="icon-cross">
+		                    <!-- <span class="icon-cross">
 		                        <img src="{{ asset('images/cross.svg')}}" class="img-fluid">
-		                    </span>
+		                    </span> -->
 		                </a>
 		            </div>
-		            <!-- End Column 2 -->
+					@endforeach
 
-		            <!-- Start Column 3 -->
-		            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-		                <a class="product-item" href="cart.html">
-		                    <img src="{{ asset('images/product2.png')}}" class="img-fluid product-thumbnail">
-		                    <h3 class="product-title">Red Dead Redemption II</h3>
-		                    <strong class="product-price">$78.00</strong>
-
-		                    <span class="icon-cross">
-		                        <img src="{{ asset('images/cross.svg')}}" class="img-fluid">
-		                    </span>
-		                </a>
-		            </div>
-		            <!-- End Column 3 -->
-
-		            <!-- Start Column 4 -->
-		            <div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
-		                <a class="product-item" href="cart.html">
-		                    <img src="{{ asset('images/product3.png')}}" class="img-fluid product-thumbnail">
-		                    <h3 class="product-title">Forza Horizon 5</h3>
-		                    <strong class="product-price">$43.00</strong>
-
-		                    <span class="icon-cross">
-		                        <img src="{{ asset('images/cross.svg')}}" class="img-fluid">
-		                    </span>
-		                </a>
-		            </div>
-		            <!-- End Column 4 -->
 
 					
 
