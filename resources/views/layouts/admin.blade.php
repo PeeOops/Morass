@@ -62,13 +62,21 @@
                     </div>
                 </li>
                 <li class="nav-item menu-items">
-                    <a class="nav-link" data-bs-toggle="collapse" href="" aria-expanded="false"
-                        aria-controls="ui-basic">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#shop-list" aria-expanded="false"
+                        aria-controls="shop-list">
                         <span class="menu-icon">
                             <i class="mdi mdi-shopping"></i>
                         </span>
                         <span class="menu-title">Shop Page</span>
+                        <i class="menu-arrow"></i>
                     </a>
+                    <div class="collapse" id="shop-list">
+                        <ul class="nav flex-column sub-menu">
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.category')}}">Category Page</a>
+                            </li>
+                            <li class="nav-item"> <a class="nav-link" href="{{route('admin.product')}}">Product Page</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="nav-item menu-items">
                     <a class="nav-link" href="">
