@@ -1,7 +1,17 @@
 <div class="main-panel">
+    @if(session('highlightMessages'))
+    <div class="alert alert-dark" role="alert">
+
+        {{session('highlightMessages')}}
+
+    </div>
+    @endif
+
     <div class="content-wrapper">
         <div class="page-header">
             <h3 class="page-title"> Home Page </h3>
+            <h3 class="page-title" style="color:red;"> You can only have 1 data exist for highlight, make sure to delete
+                it before adding another data </h3>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">Navigation</li>
@@ -32,7 +42,8 @@
                         </div>
                         <button wire:click="createHighlight" type="submit" class="btn btn-primary me-2"
                             value="Save">Submit</button>
-                        <button class="btn btn-dark">Cancel</button>
+
+                        <button wire:click="cancelForm" class="btn btn-dark">Cancel</button>
 
 
                     </div>
@@ -53,19 +64,23 @@
                     </tr>
                 </thead>
                 @foreach($highlights as $highlight)
-                
+
                 <tbody>
                     <tr>
-                        <th>{{$highlight->title}}</th>
+                        <td>{{$highlight->title}}</td>
                         <td>{{$highlight->description}}</td>
                         <td><img src="{{asset('storage/'.$highlight->image)}}" alt=""></td>
-                        <td><button onclick="return confirm('Are you sure you want to delete this data?') || event.stopImmediatePropagation()" wire:click="deleteHighlight({{ $highlight->id }})" type="submit" class="btn btn-primary  pd-0"
-                            value="Save">Delete</button></td>
+                        <td><button
+                                onclick="return confirm('Are you sure you want to delete this data?') || event.stopImmediatePropagation()"
+                                wire:click="deleteHighlight({{ $highlight->id }})" type="submit"
+                                class="btn btn-primary  pd-0" value="Save">Delete</button></td>
                     </tr>
                 </tbody>
                 @endforeach
             </table>
         </div>
+
+
 
     </div>
     <!-- content-wrapper ends -->

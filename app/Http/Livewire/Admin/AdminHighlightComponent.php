@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Admin;
 use App\Models\Highlight;
 use Livewire\Component;
 use Livewire\WithFileUploads;
+use DB;
 
 class AdminHighlightComponent extends Component
 {
@@ -14,6 +15,8 @@ class AdminHighlightComponent extends Component
     public $title;
     public $description;
     public $image;
+
+    
 
 
     public function render()
@@ -25,21 +28,29 @@ class AdminHighlightComponent extends Component
 
     public function createHighlight()
     {
-
+        $count = DB::table('highlights')->count();
 
 
         $this->validate([
-            'image' => 'image|max:5120', //5Mb Max
+            'image' => 'image|max:5120' //5Mb Max
         ]);
         
-        Highlight::create([
-    
-            'title' => $this->title,
-            'description' => $this->description,
-            'image' => $this->image->store('images','public')
-        ]);
+        if($count === 0){
+            Highlight::create([
+        
+                'title' => $this->title,
+                'description' => $this->description,
+                'image' => $this->image->store('images','public')
+            ]);
 
-        return redirect()->route('admin.highlight');
+            return redirect()->route('admin.highlight')->with('highlightMessages','Data added');
+
+        }else{
+
+            return redirect()->route('admin.highlight')->with('highlightMessages','Please delete the data before adding another one');
+        }
+
+
     }
 
     public function deleteHighlight($id){
@@ -52,6 +63,12 @@ class AdminHighlightComponent extends Component
         }
 
         $highlight->delete();
+
+        return redirect()->route('admin.highlight')->with('highlightMessages','Data deleted');
+    }
+
+    public function cancelForm(){
+        return redirect()->route('admin.highlight');
     }
     
 }

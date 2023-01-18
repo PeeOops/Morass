@@ -11,6 +11,7 @@ use App\Http\Livewire\Admin\AdminCategoryPageComponent;
 use App\Http\Livewire\Admin\AdminProductPageComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Livewire\Admin\AdminFeaturedComponent;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,7 @@ Route::middleware(['auth:sanctum','authadmin'])->group(function(){
     Route::get('/admin/highlight',AdminHighlightComponent::class)->name('admin.highlight');
     Route::get('/admin/category',AdminCategoryPageComponent::class)->name('admin.category');
     Route::get('/admin/product',AdminProductPageComponent::class)->name('admin.product');   
+    Route::get('/admin/featured',AdminFeaturedComponent::class)->name('admin.featured');
 
 });
 
