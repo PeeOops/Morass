@@ -75,8 +75,124 @@ class DatabaseSeeder extends Seeder
             'image' => '/images/featured3.png'
         ]);
 
+        // Database seeding untuk Categories
+        DB::table('categories')->insert([
+            'name' => 'Fantasy',
+        ]);
 
-
+        DB::table('categories')->insert([
+            'name' => 'RPG',
+        ]);
         
+        DB::table('categories')->insert([
+            'name' => 'Adventure',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Open World',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Action',
+        ]);
+
+        DB::table('categories')->insert([
+            'name' => 'Horror',
+        ]);
+
+        // Database seeding untuk Products
+        DB::table('products')->insert([
+            'title' => 'Bendy and the Dark Revival',
+            'description' => 'Bendy and the Dark Revival is a first-person survival horror game set in the creepiest cartoon studio to ever exist. Discover the truth. Escape the studio. Above all, fear the Ink Demon... and survive.',
+            'price' => '29.99',
+            'image' => '/images/bendy.jpg'
+        ]);
+
+        DB::table('products')->insert([
+            'title' => 'Forspoken',
+            'description' => 'Forspoken follows the journey of Frey, a young New Yorker transported to the beautiful and cruel land of Athia. In search of a way home, Frey must use her newfound magical abilities to traverse sprawling landscapes and battle monstrous creatures.',
+            'price' => '69.99',
+            'image' => '/images/forspoken.png'
+        ]);
+
+        DB::table('products')->insert([
+            'title' => 'Hogwarts Legacy',
+            'description' => 'Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.',
+            'price' => '59.99',
+            'image' => '/images/hogwarts.png'
+        ]);
+
+        DB::table('products')->insert([
+            'title' => 'Like a Dragon: Ishin!',
+            'description' => 'Don the clothes and weaponry of the elite to become the samurai of legends, Sakamoto Ryoma. Draw your blade and join the revolution in this heated historical adventure.',
+            'price' => '59.99',
+            'image' => '/images/ishin.png'
+        ]);
+
+        // Database seeding untuk Product Categories
+        DB::table('product_categories')->insert([
+            'product_id' => '1',
+            'category_id' => '3',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '1',
+            'category_id' => '5',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '1',
+            'category_id' => '6',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '2',
+            'category_id' => '1',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '2',
+            'category_id' => '2',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '2',
+            'category_id' => '3',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '2',
+            'category_id' => '5',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '3',
+            'category_id' => '1',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '3',
+            'category_id' => '2',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '3',
+            'category_id' => '3',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '3',
+            'category_id' => '4',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '4',
+            'category_id' => '3',
+        ]);
+
+        DB::table('product_categories')->insert([
+            'product_id' => '4',
+            'category_id' => '5',
+        ]);
     }
 }

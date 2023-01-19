@@ -24,6 +24,11 @@
                             <input wire:model="description" style="color:white;" type="text" name="productdescription"
                                 class="form-control" id="productdescription" placeholder="Description" required>
                         </div>
+                        <div class="form-group">
+                            <label for="productprice">Price</label>
+                            <input wire:model="price" style="color:white;" type="text" name="productprice"
+                                class="form-control" id="productprice" placeholder="Price" required>
+                        </div>
                          <div class="form-group">
                             <label for="productcategory">Categories</label>
                             <div class="d-flex check-group">
@@ -62,6 +67,7 @@
                     <tr>
                         <th scope="col">Title</th>
                         <th scope="col">Description</th>
+                        <th scope="col">Price</th>
                         <th scope="col">Categories</th>
                         <th scope="col">Image</th>
                         <th scole="col">Delete</th>
@@ -72,7 +78,8 @@
                 <tbody>
                     <tr>
                         <td>{{$product->title}}</td>
-                        <td>{{$product->description}}</td>
+                        <td style="max-width: 300px;overflow:hidden;">{{$product->description}}</td>
+                        <td>{{$product->price}}</td>
                         <td>
                             @foreach($product->categories as $category)
                             <span class="btn btn-light">{{ $category->name }}</span>

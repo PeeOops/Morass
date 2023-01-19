@@ -13,6 +13,7 @@ class AdminProductPageComponent extends Component
 
     public $title;
     public $description;
+    public $price;
     public $image;
     public $productcategories = [];
     public $productId;
@@ -39,6 +40,7 @@ class AdminProductPageComponent extends Component
         $created = Product::create([
             'title' => $this->title,
             'description' => $this->description,
+            'price' => $this->price,
             'image' => $this->image->store("images","public")
         ]);
         $created->categories()->attach($this->productcategories);
