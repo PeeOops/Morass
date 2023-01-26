@@ -153,7 +153,7 @@
                     </tr>
                     @endif
 
-                    @if ($updateFeaturedGamesId === $featured->id)
+                    @if ($updateFeaturedGamesId === $featuredgame->id)
                     <td><input wire:model="image" type="file" name="featuredimage" required></td>
                     <td><input wire:model="game_title" style="color:white;" type="text" name="gametitle"
                             class="form-control" id="gametitle" placeholder="Game Title" required></td>
